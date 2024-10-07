@@ -1,0 +1,281 @@
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #181a1b;
+}
+
+.header {
+    background-color: #181a1b;
+    padding-inline: 16px;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-inline: auto; /*Isso faz com que temos um paddigin tanto na esquerda quanto direita*/
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu{
+    display: flex;
+}
+
+.logo {
+    font-size: 28px;
+    color: #fff;
+}
+
+.menu .nav-list {
+    display: flex;
+    gap: 32px;
+}
+
+.menu .nav-list a {
+    font-size: 18px;
+    padding-block: 10px; /*Isso faz com que temos um paddigin tanto em cima quanto em baixo*/
+}
+
+.hamburger {
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid #fff;
+    cursor: pointer;
+    padding: 0;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin-top: 5px;
+    position: relative;
+    transition: 0.3s;
+}
+
+#particles-js {
+    position: relative;
+    background-color: rgb(24, 26, 27);
+    height: 90vh;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  /*MAIN*/
+
+  .name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* z-index: 1; */
+    color: white;
+    text-align: center;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .name .text {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .name h1 {
+    font-size: 100px;
+    width: 700px;
+  }
+  
+  .name .text h3 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  
+  .name .social {
+    margin-top: 10px;
+  }
+  
+  
+  .name .social a {
+    font-size: 28px;
+    margin: 0 10px;
+    color: white;
+    pointer-events: auto;
+    transition: color 0.3s ease-in-out
+  }
+  
+  
+  .name .social a:hover {
+    color: #0568c5;
+    border-radius: 30px;
+  }
+
+  /*SOBRE MIM COM FOTO*/
+
+  .section-sobre {
+    max-width: 1400px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .imagem-sobre {
+    margin-left: 50px;
+    width: 700px;
+    text-align: center;
+  }
+  
+  .imagem-sobre img {
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .texto-sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 50px;
+    margin-left: 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  .texto-sobre h1 {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+  
+  
+  
+  .texto-sobre p {
+    text-align: start;
+    font-size: 22px;
+    line-height: 1.6;
+  }
+
+  /*ESTILO DO PARALLAX*/
+
+  .parallax-section {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top: 30px;
+    height: 500px;
+    border-radius: 20px;
+    background-image: url('../src/img/mountain-6815304_1920.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+  .info-boxes {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .info-box {
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    width: 80%;
+    text-align: center;
+  }
+  
+  
+  .info-box:nth-child(odd) {
+    transform: translateY(-100px);
+  }
+  
+  .info-box:nth-child(even) {
+    transform: translateY(100px);
+  }
+  
+  .info-box .arrow-right {
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid rgba(0, 0, 0, 0.5);
+    transform: translateY(-50%);
+    
+  }
+  
+  
+  .info-box .arrow-left {
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid rgba(0, 0, 0, 0.5);
+    transform: translateY(-50%);
+  }
+  
+  .onda {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    border-radius: 0 0 20px 20px;
+    background-image: url('../src/img/wave-black1.png');
+    background-size: 1000px 100px;
+    background-position: bottom center;
+    animation: ondaAnimada 5s ease-in-out infinite alternate;
+  }
+  
+  @keyframes ondaAnimada {
+    0%{
+      transform: translateY(0px);
+    }
+    100%{
+      transform: translateY(15px);
+    }
+  }
+  
+  #onda1 {
+    z-index: 100;
+    opacity: 1;
+    background-position-x: 600px;
+  }
+  
+  #onda2 {
+    z-index: 90;
+    opacity: 0.5;
+    background-position-x: 500px;
+  }
+  
+  #onda3 {
+    z-index: 70;
+    opacity: 0.2;
+    background-position-x: 400px;
+  }
+  
+  #onda4 {
+    z-index: 75;
+    opacity: 0.8;
+    background-position-x: 300px;
+  }

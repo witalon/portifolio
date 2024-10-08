@@ -57,10 +57,10 @@
 
     <main class="main">
 
-<!-- Aqui esta o id para o efeito das particulas -->
+        <!-- Aqui esta o id para o efeito das particulas -->
         <div id="particles-js"></div>
 
-    <!-- E aqui esta o meu nome com nome com minhas redes sociais -->
+        <!-- E aqui esta o meu nome com nome com minhas redes sociais -->
         <div class="name">
             <div class="text">
                 <h1>Witalon Lopes</h1>
@@ -88,11 +88,18 @@
 
     <section class="section-sobre" id="sobre">
         <div class="imagem-sobre scroll-img">
-            <img src="./src/img/teste5.png" alt="Imagem ao lado do sobre mim">
+            <picture>
+                <source media="(min-width: 412px)" srcset="./src/img/teste5.png">
+                <img src="./src/img/teste5-mobile2.png" alt="Imagem ao lado do sobre mim">
+            </picture>
         </div>
         <div class="texto-sobre scroll-text">
             <h1>Muito prazer me chamo Witalon Lopes</h1>
-            <p>Sou um entusiasta da tecnologia, fascinado pelo potencial de transformar vidas. Minha carreira mudou da saúde para a tecnologia, onde encontrei minha verdadeira paixão. Aprimoro habilidades no DevQuest e na faculdade de Análise e Desenvolvimento de Sistemas, focando em projetos front-end. Habilidades de comunicação e empatia são essenciais. Busco inovação, aprendizado contínuo e impacto positivo, sempre explorando novas oportunidades e colaborando com mentes criativas.</p>
+            <p>Sou um entusiasta da tecnologia, fascinado pelo potencial de transformar vidas. Minha carreira mudou da
+                saúde para a tecnologia, onde encontrei minha verdadeira paixão. Aprimoro habilidades no DevQuest e na
+                faculdade de Análise e Desenvolvimento de Sistemas, focando em projetos front-end. Habilidades de
+                comunicação e empatia são essenciais. Busco inovação, aprendizado contínuo e impacto positivo, sempre
+                explorando novas oportunidades e colaborando com mentes criativas.</p>
         </div>
     </section>
 
@@ -133,7 +140,65 @@
         <div class="onda" id="onda4"></div>
 
     </section>
-    
+
+    <!-- AQUI VAI COMEÇAR APENAS AS TECNOLOGIOAS QUE USO -->
+
+    <section class="section-tecnologias animated-element scroll-social">
+        <h1>Tecnologias</h1>
+        <div class="tecnologias">
+            <div class="icon-wrapper scroll-social-esquerda">
+                <i class="fa-brands fa-html5" data-tooltip="HTML5: É uma liguagem de marcação."></i>
+            </div>
+            <div class="icon-wrapper scroll-social-esquerda">
+                <i class="fa-brands fa-css3-alt" data-tooltip="CSS3: É uma liguagem de estilização."></i>
+            </div>
+            <div class="icon-wrapper scroll-social-direita">
+                <i class="fa-brands fa-js"
+                    data-tooltip="JavaScript: É uma linguagem de programação que permite a você implementar itens complexos em páginas web."></i>
+            </div>
+            <div class="icon-wrapper scroll-social-direita">
+                <i class="fa-solid fa-database"
+                    data-tooltip="Database: É uma coleção organizada de informações - ou dados - estruturadas."></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- AQUI COMEÇA A SESÃO DE PROJETOS -->
+
+    <section class="portifolio" id="projetos">
+        <div class="interface">
+            <h2 class="titulo-port">Meus Projetos</h2>
+            <div class="flex">
+                <div class="project-container scroll1">
+                    <div class="img-port scroll-port1 scroll1" style="background-image: url(./src/img/teste-port1.jpg);">
+                        <div class="overlay">Projeto1</div>
+                    </div>
+                    <div class="links">
+                        <a href="https://github.com/WitalonLopes" target="_blank"><i class="fa-solid fa-code"></i>GitHub</a>
+                        <a href="https://github.com/WitalonLopes" target="_blank"><i class="fa-solid fa-eye"></i>Deploy</a>
+                    </div>
+                </div>
+                <div class="project-container scroll2">
+                    <div class="img-port scroll-port1 scroll2" style="background-image: url(./src/img/teste-port2.jpg);">
+                        <div class="overlay">Projeto2</div>
+                    </div>
+                    <div class="links">
+                        <a href="https://github.com/WitalonLopes" target="_blank"><i class="fa-solid fa-code"></i>GitHub</a>
+                        <a href="https://github.com/WitalonLopes" target="_blank"><i class="fa-solid fa-eye"></i>Deploy</a>
+                    </div>
+                </div>
+                <div class="project-container scroll3">
+                    <div class="img-port scroll-port1 scroll3" style="background-image: url(./src/img/teste-port1.jpg);">
+                        <div class="overlay">Projeto3</div>
+                    </div>
+                    <div class="links">
+                        <a href="https://github.com/WitalonLopes" target="_blank"><i class="fa-solid fa-code"></i>GitHub</a>
+                        <a href="https://github.com/WitalonLopes" target="_blank"><i class="fa-solid fa-eye"></i>Deploy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="./js/index.js"></script>
     <script src="./js/particles.min.js"></script>

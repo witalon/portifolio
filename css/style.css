@@ -279,3 +279,166 @@ body {
     opacity: 0.8;
     background-position-x: 300px;
   }
+
+  /*TECNOLOGIAS*/
+
+.section-tecnologias {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.section-tecnologias h1 {
+  text-transform: uppercase;
+  font-size: 40px;
+  margin-bottom: 35px;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+.tecnologias {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 20px;
+}
+
+.icon-wrapper {
+  position: relative;
+}
+
+.tecnologias i {
+  color: #fff;
+  font-size: 80px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.tecnologias i:hover {
+  transform: scale(1.2);
+  color: #0568c5;
+}
+
+.tooltip {
+  visibility: hidden;
+  width: 200px;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  right: 110%;
+  transform: translate(-10px, -50%);
+  opacity: 0;
+  transition: opacity 0.3s
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent #0568c5;
+}
+
+.icon-wrapper:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*PROJETOS*/
+
+.portifolio {
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 100dvh;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.portifolio h2 {
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-size: 40px;
+  margin-bottom: 35px;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+.portifolio .flex {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-port {
+  background-color: red;
+  width: 360px;
+  height: 460px;
+  background-size: cover;
+  background-position: 100% 0%;
+  transition: 8s;
+  cursor: pointer;
+  border-radius: 40px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.img-port:hover {
+  background-position: 100% 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000b8;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.links a {
+  font-size: 22px;
+  margin: 0 10px;
+  color: white;
+  pointer-events: auto;
+  transition: color 0.3s ease-in-out;
+}
+
+.links a:hover {
+  color: #0568c5;
+  border-radius: 30px;
+}

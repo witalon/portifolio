@@ -24,3 +24,39 @@ window.addEventListener('scroll', function(){
     onda4.style.backgroundPositionX = 300 + rolagemPos * -3 + 'px'
 })
 
+// ANIMAÇÃO DA TECNOLIAS
+const animatedElements = document.querySelectorAll('.animated-element');
+
+function isElementInView(element) {
+  const bounding = element.getBoundingClientRect();
+  return (
+    bounding.top >= 0 &&
+    bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+function checkElementsVisibility() {
+  animatedElements.forEach(element => {
+    if (isElementInView(element)) {
+      element.classList.add('show');
+    }
+  });
+}
+
+window.addEventListener('scroll', checkElementsVisibility);
+
+document.addEventListener('DOMContentLoaded', checkElementsVisibility);
+
+//TOOLTIPS
+
+document.addEventListener('DOMContentLoaded', () => {
+    const icons = document.querySelectorAll('.tecnologias i');
+
+    icons.forEach(icon => {
+        const tooltipText = icon.getAttribute('data-tooltip');
+        const tooltip = document.createElement('div');
+        tooltip.className = 'tooltip';
+        tooltip.innerText = tooltipText;
+        icon.parentElement.appendChild(tooltip);
+    });
+});

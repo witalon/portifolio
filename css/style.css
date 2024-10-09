@@ -442,3 +442,58 @@ body {
   color: #0568c5;
   border-radius: 30px;
 }
+
+/*RODAPÉ*/
+
+.line-footer p {
+  color: #555b5e;
+  padding-bottom: 20px;
+  letter-spacing: 5px;
+}
+
+.line-footer a {
+  text-decoration: none;
+  color: #555b5e;
+  transition: color 0.4s ease-in-out;
+  letter-spacing: 3px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.line-footer a:hover {
+  color: #fff;
+}
+
+.line-footer {
+    margin: 90px 0 90px;
+    text-align: center;
+}
+
+.rodape {
+  background-color: #181a1b;
+  color: white;
+  padding: 16px;
+  text-align: center;
+}
+
+.line-baixo {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin: 0 130px 10px;
+}
+
+.rodape .logo-footer {
+font-family: "Roboto", sans-serif;
+}
+
+.rodape .btn-social a {
+  color: white;
+  font-size: 28px;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.rodape .btn-social a:hover {
+  color: #0568c5;
+}

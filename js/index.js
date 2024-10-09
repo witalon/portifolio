@@ -60,3 +60,41 @@ document.addEventListener('DOMContentLoaded', () => {
         icon.parentElement.appendChild(tooltip);
     });
 });
+
+// src/js/social-scroll.js
+document.addEventListener('DOMContentLoaded', () => {
+  const fixedSocial = document.querySelector('.fixed-social');
+  const socialSection = document.querySelector('.social');
+
+  const handleScroll = () => {
+      const socialRect = socialSection.getBoundingClientRect();
+      if (socialRect.bottom < 0) {
+          fixedSocial.style.display = 'flex';
+      } else {
+          fixedSocial.style.display = 'none';
+      }
+  };
+
+  window.addEventListener('scroll', handleScroll);
+});
+
+//FOOTER SCROLL LATERAL SUMINDO
+document.addEventListener('DOMContentLoaded', () => {
+const fixedSocial = document.querySelector('.fixed-social');
+const socialSection = document.querySelector('.social');
+const footerSection = document.querySelector('.rodape');
+
+const handleScroll = () => {
+    const socialRect = socialSection.getBoundingClientRect();
+    const footerRect = footerSection.getBoundingClientRect();
+
+    if (socialRect.bottom < 0 && footerRect.top > window.innerHeight) {
+        fixedSocial.style.display = 'flex';
+    } else {
+        fixedSocial.style.display = 'none';
+    }
+};
+
+window.addEventListener('scroll', handleScroll);
+});
+

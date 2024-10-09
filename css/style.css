@@ -16,6 +16,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 110;
 }
 
 .menu{
@@ -35,6 +41,22 @@ body {
 .menu .nav-list a {
     font-size: 18px;
     padding-block: 10px; /*Isso faz com que temos um paddigin tanto em cima quanto em baixo*/
+    position: relative;
+}
+
+.menu .nav-list a::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: " ";
+  width: 0%;
+  height: 2px;
+  background-color: #8b949d;
+  transition: 0.4s ease-in-out;
+}
+
+.menu .nav-list a:hover::after {
+  width: 100%;
 }
 
 .hamburger {
@@ -73,7 +95,6 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* z-index: 1; */
     color: white;
     text-align: center;
     pointer-events: none;
@@ -112,9 +133,34 @@ body {
   
   
   .name .social a:hover {
-    color: #0568c5;
+    color: #8b949d;
     border-radius: 30px;
   }
+
+  /*Social lateral*/
+
+.fixed-social {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  z-index: 100;
+}
+
+.fixed-social a {
+  font-size: 24px;
+  margin: 10px 0;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.fixed-social a:hover {
+  color: #8b949d;
+}
 
   /*SOBRE MIM COM FOTO*/
 
@@ -316,13 +362,13 @@ body {
 
 .tecnologias i:hover {
   transform: scale(1.2);
-  color: #0568c5;
+  color: #8b949d;
 }
 
 .tooltip {
   visibility: hidden;
   width: 200px;
-  background-color: #fff;
+  background-color: #8b949d;
   color: #000;
   text-align: center;
   border-radius: 6px;
@@ -344,7 +390,7 @@ body {
   margin-top: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: transparent transparent transparent #0568c5;
+  border-color: transparent transparent transparent #8b949d;
 }
 
 .icon-wrapper:hover .tooltip {
@@ -385,7 +431,6 @@ body {
 }
 
 .img-port {
-  background-color: red;
   width: 360px;
   height: 460px;
   background-size: cover;
@@ -439,7 +484,7 @@ body {
 }
 
 .links a:hover {
-  color: #0568c5;
+  color: #8b949d;
   border-radius: 30px;
 }
 
@@ -472,6 +517,8 @@ body {
 .rodape {
   background-color: #181a1b;
   color: white;
+  max-width: 1400px;
+  margin: 0 auto;
   padding: 16px;
   text-align: center;
 }
@@ -480,7 +527,7 @@ body {
 display: flex;
 justify-content: space-between;
 align-items: center;
-margin: 0 130px 10px;
+/* margin: 0 130px 10px; */
 }
 
 .rodape .logo-footer {
@@ -495,5 +542,5 @@ font-family: "Roboto", sans-serif;
 }
 
 .rodape .btn-social a:hover {
-  color: #0568c5;
+  color: #8b949d;
 }

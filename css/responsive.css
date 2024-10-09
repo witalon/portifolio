@@ -49,6 +49,7 @@
     #particles-js {
         position: relative;
         height: 95dvh;
+        margin-top: 70px;
     }
 
     .hamburger {
@@ -145,6 +146,16 @@
     .social a i {
         font-size: 27px;
     }
+
+    .fixed-social {
+        display: none;
+    }
+
+    .fixed-social a {
+        display: none;
+        pointer-events: none;
+    }
+
 
     /*SOBRE MIM COMEÇA AQUI*/
 
